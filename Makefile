@@ -13,3 +13,31 @@ LIB		= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strle
 TEST	= ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
 			ft_memcpy.c ft_memmove.c ft_memset.c ft_strchr.c ft_strdup.c ft_strlcat.c ft_strlcpy.c \
 			ft_strlen.c ft_strncmp.c ft_strrchr.c ft_tolower.c ft_toupper.c
+
+# SRCS	=	$(LIB)
+SRCS	=	$(TEST)
+OBJECTS	=	$(SRCS:.c=.o)
+HEADER	=	libft.h
+RM		=	rm -f
+
+all:	$(NAME)
+
+$(NAME): $(OBJECTS)
+		ar rcs $(NAME) $(OBJECTS)
+
+%.o:	%.c $(HEADER)
+		$(CC) -I. $(CFLAGS) -c $< -o $@
+
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
+	gcc -nostartfiles -shared -o libft.so $(OBJECTS)
+
+clean:
+		$(RM) $(OBJECTS)
+
+fclean:	clean
+		$(RM) $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re
