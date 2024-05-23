@@ -6,7 +6,7 @@
 /*   By: tautin-- <tautin--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 15:32:40 by tautin--          #+#    #+#             */
-/*   Updated: 2024/05/22 17:30:30 by tautin--         ###   ########.fr       */
+/*   Updated: 2024/05/23 10:47:13 by tautin--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,9 @@ void	*memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 char	*strdup(const char *s);
 size_t	ft_strlcat(char *dst, const char *src, size_t siz);
-size_t	strlcpy(char* dst, const char* src, size_t siz);
+size_t	strlcpy(char *dst, const char *src, size_t siz);
 size_t	ft_strlen(const char *s);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
 
 #endif
