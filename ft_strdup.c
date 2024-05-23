@@ -6,7 +6,7 @@
 /*   By: tautin-- <tautin--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 10:47:31 by tautin--          #+#    #+#             */
-/*   Updated: 2024/05/22 17:23:07 by tautin--         ###   ########.fr       */
+/*   Updated: 2024/05/23 14:44:45 by tautin--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,12 @@ char	*ft_strcpy(char *dest, char *src)
 char	*ft_strdup(const char *s)
 {
 	char	*str;
+	char	*ft_s;
 
+	ft_s = (char *)s;
 	str = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!str)
 		return (NULL);
-	ft_strcpy(str, s);
+	ft_strcpy(str, ft_s);
 	return (str);
 }

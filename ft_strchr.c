@@ -6,7 +6,7 @@
 /*   By: tautin-- <tautin--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 10:54:42 by tautin--          #+#    #+#             */
-/*   Updated: 2024/05/23 11:15:26 by tautin--         ###   ########.fr       */
+/*   Updated: 2024/05/23 16:38:57 by tautin--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	int		i;
+	char	*ft_s;
 
-	i = 0;
-	while (s[i])
+	i = 1;
+	ft_s = (char *)s;
+	while (ft_s[i - 1])
 	{
-		if (s[i] == c)
-			return (&s[i]);
+		if (ft_s[i] == c)
+			return (&ft_s[i]);
 		i++;
 	}
 	return (NULL);

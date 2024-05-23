@@ -6,7 +6,7 @@
 /*   By: tautin-- <tautin--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:40:22 by tautin--          #+#    #+#             */
-/*   Updated: 2024/05/23 11:15:12 by tautin--         ###   ########.fr       */
+/*   Updated: 2024/05/23 14:38:11 by tautin--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char			*ft_src;
 
 	i = 0;
-	ft_dest = (unsigned char *)dest;
-	ft_src = (unsigned char *)src;
+	ft_dest = (char *)dest;
+	ft_src = (char *)src;
 	while (i < n)
 	{
 		ft_dest[i] = ft_src[i];

@@ -6,7 +6,7 @@
 /*   By: tautin-- <tautin--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 15:32:40 by tautin--          #+#    #+#             */
-/*   Updated: 2024/05/23 12:02:09 by tautin--         ###   ########.fr       */
+/*   Updated: 2024/05/23 14:42:24 by tautin--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdio.h>
 # include <unistd.h>
+# include <stdlib.h>
 
 /**************************/
 /* fonctions obligatoires */
