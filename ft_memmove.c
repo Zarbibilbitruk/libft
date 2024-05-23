@@ -6,13 +6,13 @@
 /*   By: tautin-- <tautin--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:40:00 by tautin--          #+#    #+#             */
-/*   Updated: 2024/05/22 17:34:04 by tautin--         ###   ########.fr       */
+/*   Updated: 2024/05/23 11:15:19 by tautin--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	int		ft_n;
 	char	*ft_dest;

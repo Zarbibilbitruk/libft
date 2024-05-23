@@ -6,13 +6,13 @@
 /*   By: tautin-- <tautin--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 17:07:46 by tautin--          #+#    #+#             */
-/*   Updated: 2024/05/22 17:44:00 by tautin--         ###   ########.fr       */
+/*   Updated: 2024/05/23 11:15:40 by tautin--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	strlcpy(char *dst, const char *src, size_t siz)
+size_t	ft_strlcpy(char *dst, const char *src, size_t siz)
 {
 	int	i;
 	int	ft_siz;

@@ -6,13 +6,13 @@
 /*   By: tautin-- <tautin--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 10:44:21 by tautin--          #+#    #+#             */
-/*   Updated: 2024/05/23 10:47:01 by tautin--         ###   ########.fr       */
+/*   Updated: 2024/05/23 11:16:09 by tautin--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		return (c + 32);

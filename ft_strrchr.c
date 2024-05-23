@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tautin-- <tautin--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/23 10:39:58 by tautin--          #+#    #+#             */
-/*   Updated: 2024/05/23 11:16:08 by tautin--         ###   ########.fr       */
+/*   Created: 2024/05/23 11:12:22 by tautin--          #+#    #+#             */
+/*   Updated: 2024/05/23 11:42:23 by tautin--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
+	int	i;
+	int	last_address;
+
+	i = 0;
+	last_address = NULL;
+	while (s[i])
+	{
+		if (s[i] == c)
+			last_address = &s[i];
+		i++;
+	}
+	return (last_address);
 }

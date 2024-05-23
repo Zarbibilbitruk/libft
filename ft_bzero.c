@@ -6,13 +6,13 @@
 /*   By: tautin-- <tautin--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 16:20:50 by tautin--          #+#    #+#             */
-/*   Updated: 2024/05/22 16:19:15 by tautin--         ###   ########.fr       */
+/*   Updated: 2024/05/23 11:15:02 by tautin--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	int		i;
 	char	*str;
