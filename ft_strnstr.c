@@ -1,27 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tautin-- <tautin--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/23 10:54:42 by tautin--          #+#    #+#             */
-/*   Updated: 2024/05/24 15:50:50 by tautin--         ###   ########.fr       */
+/*   Created: 2024/05/24 13:10:27 by tautin--          #+#    #+#             */
+/*   Updated: 2024/05/24 18:55:29 by tautin--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int		i;
-	char	*ft_s;
+	size_t		i;
+	size_t		j;
+	char		*ft_big;
+	char		*ft_little;
 
 	i = 0;
-	ft_s = (char *)s;
-	while (ft_s[i] && ft_s[i] != c)
-		i++;
-	if (ft_s[i] != c)
+	ft_big = (char *)big;
+	ft_little = (char *)little;
+	if (ft_big == 0 && len == 0)
 		return (NULL);
-	return (&ft_s[i]);
+	if (ft_little[i] == 0)
+		return (&ft_big[i]);
+	while (ft_big[i] != 0 && i < len)
+	{
+		j = 0;
+		while ((ft_big[i + j] == ft_little[j]) && i + j < len)
+		{
+			j++;
+			if (ft_little[j] == 0)
+				return (&ft_big[i]);
+		}
+		i++;
+	}
+	return (NULL);
 }
