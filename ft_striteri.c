@@ -6,7 +6,7 @@
 /*   By: tautin-- <tautin--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 16:06:31 by tautin--          #+#    #+#             */
-/*   Updated: 2024/05/28 16:44:00 by tautin--         ###   ########.fr       */
+/*   Updated: 2024/05/28 17:12:11 by tautin--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	size_t	i;
-		
+
 	i = 0;
 	if (s != NULL)
 	{
