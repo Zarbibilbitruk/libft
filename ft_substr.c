@@ -6,7 +6,7 @@
 /*   By: tautin-- <tautin--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 19:32:40 by tautin--          #+#    #+#             */
-/*   Updated: 2024/05/27 13:38:38 by tautin--         ###   ########.fr       */
+/*   Updated: 2024/05/31 15:40:05 by tautin--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,20 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	char	*tab;
-	char	*ft_s;
 
 	if (s == NULL)
 		return (NULL);
 	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
 	i = 0;
-	ft_s = (char *)s;
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
 	tab = malloc(sizeof(char) * (len + 1));
 	if (tab == 0)
 		return (NULL);
 	while (i < len)
 	{
-		tab[i] = ft_s[start + i];
+		tab[i] = s[start + i];
 		i++;
 	}
 	tab[i] = '\0';
