@@ -6,13 +6,13 @@
 /*   By: tautin-- <tautin--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 10:47:31 by tautin--          #+#    #+#             */
-/*   Updated: 2024/05/23 14:44:45 by tautin--         ###   ########.fr       */
+/*   Updated: 2024/05/31 15:36:31 by tautin--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, char *src)
+static char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
 
