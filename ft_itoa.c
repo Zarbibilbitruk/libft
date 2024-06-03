@@ -6,13 +6,13 @@
 /*   By: tautin-- <tautin--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 15:06:42 by tautin--          #+#    #+#             */
-/*   Updated: 2024/05/31 12:55:21 by tautin--         ###   ########.fr       */
+/*   Updated: 2024/06/03 12:10:07 by tautin--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	len_nbr(int n)
+static size_t	len_nbr(int n)
 {
 	int	i;
 
