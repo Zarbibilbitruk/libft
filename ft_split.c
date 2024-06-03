@@ -6,7 +6,7 @@
 /*   By: tautin-- <tautin--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 12:20:15 by tautin--          #+#    #+#             */
-/*   Updated: 2024/06/03 17:28:49 by tautin--         ###   ########.fr       */
+/*   Updated: 2024/06/03 18:01:13 by tautin--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ static size_t	count_str(char const *s, char c)
 	size_t	nbr;
 
 	i = 0;
-	nbr = 0;
+	nbr = 1;
 	while (s[i])
 	{
-		if (s[i] == c || s[i])
+		if (s[i] == c)
 			nbr++;
 		i++;
 	}
@@ -32,4 +32,11 @@ char	**ft_split(char const *s, char c)
 {
 	char	**tab;
 	size_t	string_len;
+	int		i;
+
+	tab = (char **)malloc((count_str(s, c) + 1) * sizeof(char *));
+	if (!s || !tab)
+		return (NULL);
+	i = 0;
+	
 }
