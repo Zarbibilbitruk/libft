@@ -6,7 +6,7 @@
 /*   By: tautin-- <tautin--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 12:20:15 by tautin--          #+#    #+#             */
-/*   Updated: 2024/06/05 15:16:20 by tautin--         ###   ########.fr       */
+/*   Updated: 2024/06/06 16:25:19 by tautin--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,28 @@ static size_t	count_str(char const *s, char c)
 	return (nbr);
 }
 
+static size_t	another_len(char const *s, char c)
+{
+	size_t	len;
+
+	if (ft_strchr(s, c) == NULL)
+		len = ft_strlen(s);
+	else
+		len = ft_strchr(s, c) - s;
+	return (len);
+}
+
+static char	**ft_free(char	**tab, int j)
+{
+	while (j >= 0)
+	{
+		free (tab[j]);
+		j--;
+	}
+	free (tab);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**tab;
@@ -49,11 +71,10 @@ char	**ft_split(char const *s, char c)
 			s++;
 		if (*s)
 		{
-			if (ft_strchr(s, c) == NULL)
-				string_len = ft_strlen(s);
-			else
-				string_len = ft_strchr(s, c) - s;
+			string_len = another_len(s, c);
 			tab[j++] = ft_substr(s, 0, string_len);
+			if (tab[j - 1] == NULL)
+				return (ft_free(tab, j - 2));
 			s += string_len;
 		}
 	}

@@ -6,7 +6,7 @@
 /*   By: tautin-- <tautin--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 19:32:40 by tautin--          #+#    #+#             */
-/*   Updated: 2024/05/31 15:40:05 by tautin--         ###   ########.fr       */
+/*   Updated: 2024/06/06 14:56:40 by tautin--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (len > ft_strlen(s) - start)
 		len = ft_strlen(s) - start;
 	tab = malloc(sizeof(char) * (len + 1));
-	if (tab == 0)
+	if (tab == NULL)
 		return (NULL);
 	while (i < len)
 	{
