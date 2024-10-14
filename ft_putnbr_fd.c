@@ -31,3 +31,9 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(tampon % 10, fd);
 	}
 }
+
+/* structure simplifie
+if (i > 9)
+	ft_putnbr(i / 10);
+write(1, &"0123456789"[i % 10], 1);
+*/
