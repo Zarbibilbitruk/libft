@@ -6,7 +6,7 @@
 /*   By: tautin-- <tautin--@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 15:32:40 by tautin--          #+#    #+#             */
-/*   Updated: 2024/06/03 17:00:39 by tautin--         ###   ########.fr       */
+/*   Updated: 2025/01/06 15:42:20 by tautin--         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdarg.h>
 
 /**************************/
 /* fonctions obligatoires */
@@ -55,5 +56,18 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+
+/*************/
+/* ft_printf */
+/*************/
+
+int		ft_printf(const char *arg0, ...);
+int		print_c(int c);
+int		print_s(char *str);
+int		print_int(long nbr);
+int		print_percent(void);
+int		print_u(unsigned long nbr);
+int		print_p(unsigned long long ptr);
+int		print_hexa(unsigned int nbr, const char desc);
 
 #endif
